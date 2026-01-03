@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jesse Adejoh | Aspiring Cloud Administrator</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 850px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            background-color: #f5f5f5;
+        }
+        
+        .container {
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid #0078d4;
+        }
+        
+        h1 {
+            font-size: 2.2em;
+            color: #0078d4;
+            margin-bottom: 10px;
+        }
+        
+        .contact-info {
+            color: #666;
+            font-size: 0.95em;
+        }
+        
+        .contact-info a {
+            color: #0078d4;
+            text-decoration: none;
+        }
+        
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+        
+        h2 {
+            font-size: 1.3em;
+            color: #0078d4;
+            margin-top: 25px;
+            margin-bottom: 15px;
+            padding-bottom: 5px;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        h3 {
+            font-size: 1.1em;
+            color: #444;
+            margin-top: 15px;
+            margin-bottom: 8px;
+        }
+        
+        p {
+            margin-bottom: 10px;
+        }
+        
+        ul {
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+        
+        li {
+            margin-bottom: 5px;
+        }
+        
+        .skills-grid {
+            display: grid;
+            grid-template-columns: 150px 1fr;
+            gap: 8px 15px;
+            margin-bottom: 15px;
+        }
+        
+        .skill-category {
+            font-weight: bold;
+            color: #555;
+        }
+        
+        .project {
+            margin-bottom: 20px;
+            padding: 15px;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+            border-left: 3px solid #0078d4;
+        }
+        
+        .project h3 {
+            margin-top: 0;
+        }
+        
+        .tech-used {
+            font-size: 0.9em;
+            color: #666;
+            font-style: italic;
+        }
+        
+        .cert-item {
+            margin-bottom: 8px;
+        }
+        
+        .portfolio-btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 25px;
+            background-color: #0078d4;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+        
+        .portfolio-btn:hover {
+            background-color: #005a9e;
+        }
+
+        @media (max-width: 600px) {
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .skill-category {
+                margin-top: 10px;
+            }
+            
+            body {
+                padding: 20px 10px;
+            }
+            
+            .container {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>JESSE ADEJOH</h1>
+            <p class="contact-info">
+                Liverpool, UK | 07563 990697 | jesseadejoh9@gmail.com<br><br>
+                <a href="https://github.com/Jesseee9" target="_blank">GitHub</a> | 
+                <a href="https://linkedin.com/in/jesseadejoh" target="_blank">LinkedIn</a>
+            </p>
+        </header>
+
+        <section>
+            <h2>Professional Summary</h2>
+            <p>Aspiring IT Systems Administrator with a comprehensive home lab infrastructure and hands-on experience in Windows Server, Active Directory, and ServiceNow automation. Demonstrated ability to build enterprise-grade networks, script in PowerShell, and integrate hybrid cloud environments through self-directed learning. Highly reliable and adaptable, currently seeking an IT Support or Junior Admin role to apply technical skills in a production environment.</p>
+        </section>
+
+        <section>
+            <h2>Technical Projects</h2>
+            <p>View full code, scripts, build documentation, and screenshots at: <a href="https://github.com/Jesseee9" target="_blank">github.com/Jesseee9</a></p>
+            
+            <p><strong>Enterprise Infrastructure Lab (Windows Server / Active Directory / ServiceNow)</strong></p>
+            
+            <div class="project">
+                <h3>Project 1: On-Premises Infrastructure Build</h3>
+                <p>Built a corporate Windows domain environment from scratch to simulate a live office network.</p>
+                <ul>
+                    <li>Deployed Windows Server 2022 as a Domain Controller using VMware Workstation</li>
+                    <li>Configured Active Directory Domain Services (AD DS), DNS, and DHCP scopes</li>
+                    <li>Implemented an isolated virtual LAN and joined Windows 11 client workstations to the domain</li>
+                </ul>
+                <p class="tech-used">Technologies Used: Windows Server 2022, VMware, DNS, DHCP, TCP/IP Networking</p>
+            </div>
+
+            <div class="project">
+                <h3>Project 2: Identity & Automation</h3>
+                <p>Automated user provisioning to eliminate manual entry and sync on-prem identities to the cloud.</p>
+                <ul>
+                    <li>Designed a departmental OU structure mirroring real-world corporate hierarchy</li>
+                    <li>Wrote a PowerShell script to bulk-create AD users from CSV files, reducing creation time by 90%</li>
+                    <li>Provisioned hybrid identities by syncing local AD users to Azure Entra ID (Cloud)</li>
+                </ul>
+                <p class="tech-used">Technologies Used: PowerShell Scripting, Azure Entra ID, CSV Parsing, Bulk Administration</p>
+            </div>
+
+            <div class="project">
+                <h3>Project 3: ServiceNow Operations (ITSM)</h3>
+                <p>Bridged a cloud ITSM platform with on-premises infrastructure for automated incident handling.</p>
+                <ul>
+                    <li>Configured a dual-NIC setup to allow secure communication between the isolated lab and the internet</li>
+                    <li>Installed and validated a ServiceNow MID Server to command the Windows Server remotely</li>
+                    <li>Built Flow Designer automation to trigger remediation scripts automatically when specific incidents occurred</li>
+                </ul>
+                <p class="tech-used">Technologies Used: ServiceNow, MID Server, Flow Designer, Firewall Configuration</p>
+            </div>
+        </section>
+
+        <section>
+            <h2>Technical Skills</h2>
+            <div class="skills-grid">
+                <span class="skill-category">Infrastructure:</span>
+                <span>Windows Server 2022, Active Directory, DNS, DHCP, Group Policy</span>
+                
+                <span class="skill-category">Cloud & Identity:</span>
+                <span>Azure Entra ID, Microsoft Entra, Microsoft 365 Administration</span>
+                
+                <span class="skill-category">Automation:</span>
+                <span>PowerShell scripting, Flow Designer, CSV-based bulk operations</span>
+                
+                <span class="skill-category">ITSM:</span>
+                <span>ServiceNow administration, MID Server, Incident Management workflows</span>
+                
+                <span class="skill-category">Virtualization:</span>
+                <span>VMware Workstation, Snapshots, Virtual Networking (vSwitch)</span>
+                
+                <span class="skill-category">Operating Systems:</span>
+                <span>Windows Server, Windows 10/11, Linux (CLI basics)</span>
+            </div>
+        </section>
+
+        <section>
+            <h2>Professional Experience</h2>
+            <h3>Logistics Operative (Contractor) | KFM & Various Agencies | Sep 2023 – Present</h3>
+            <p>Currently engaged with KFM (and previously other agencies) fulfilling contract assignments for major retailers including ASDA and NEXT, while undertaking intensive self-directed IT training.</p>
+            <ul>
+                <li><strong>Technical Adaptability:</strong> Rapidly adapted to various proprietary Warehouse Management Systems (WMS) and handheld data terminals across different organisations</li>
+                <li><strong>Data Accuracy:</strong> Analysed scan data to classify stock and flag tracking errors, ensuring inventory database integrity was maintained</li>
+                <li><strong>Reliability:</strong> Maintained a 100% attendance record and consistently met strict Service Level Agreements (SLAs) regarding throughput and accuracy</li>
+                <li><strong>Process Improvement:</strong> Identified recurring workflow bottlenecks and communicated logic-based solutions to shift supervisors</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Certifications & Credentials</h2>
+            <p><strong>Microsoft Applied Skills:</strong></p>
+            <ul>
+                <li><a href="https://learn.microsoft.com/api/credentials/share/en-us/JesseAdejoh-2833/BD3617BADE595F2E" target="_blank">Identities and Access Using Microsoft Entra</a></li>
+                <li><a href="https://learn.microsoft.com/api/credentials/share/en-us/JesseAdejoh-2833/117BA2E2E895B0FD" target="_blank">Generate Reports with AI Research Agents</a></li>
+            </ul>
+            <p class="cert-item"><strong>Google IT Support Professional Certificate</strong> — Coursera</p>
+            <p class="cert-item"><strong>NCFE Level 2 Diploma in Data Protection & Data Security</strong></p>
+            <p><strong>In Progress:</strong></p>
+            <ul>
+                <li>AI-900: Microsoft Azure AI Fundamentals</li>
+                <li>SC-900: Microsoft Security, Compliance, and Identity Fundamentals</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Education & Training</h2>
+            <p><strong>NCFE Level 2 Diploma in Entry to the Uniformed Services</strong></p>
+            <p><strong>St. Theresa Secondary School</strong> — English (Excellent), Spoken Language (Distinction)</p>
+            <p><strong>Continuous Learning:</strong> Microsoft Learn | ServiceNow University</p>
+            <p><strong>Additional:</strong> Skills for Life Military Camp (Leadership & Discipline), Cat Zero Training (Health & Safety)</p>
+        </section>
+
+        <footer style="text-align: center; margin-top: 30px;">
+            <a href="https://github.com/Jesseee9/IT-Infrastructure-Portfolio" target="_blank" class="portfolio-btn">View Full Portfolio on GitHub</a>
+        </footer>
+    </div>
+</body>
+</html>
