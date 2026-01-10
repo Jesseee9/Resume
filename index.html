@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Jesse Adejoh - IT Professional | Microsoft 365 Administrator | Cloud Infrastructure">
-    <meta name="keywords" content="IT Administrator, Microsoft 365, Azure, Active Directory, PowerShell, ServiceNow">
+    <meta name="keywords" content="IT Administrator, Microsoft 365, Azure, Active Directory, PowerShell, ServiceNow, Entra ID">
     <title>Jesse Adejoh | IT Professional</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -230,6 +230,19 @@
             border-radius: 50%;
         }
 
+        .job li.highlight {
+            background: var(--secondary-light);
+            padding: 12px 12px 12px 32px;
+            border-radius: var(--radius);
+            margin-left: -12px;
+            margin-bottom: 12px;
+        }
+
+        .job li.highlight::before {
+            left: 12px;
+            top: 18px;
+        }
+
         .job-tech {
             display: flex;
             flex-wrap: wrap;
@@ -262,13 +275,24 @@
 
         /* Projects */
         .projects-intro {
-            margin-bottom: 24px;
+            margin-bottom: 16px;
             font-size: 0.95rem;
             color: var(--grey);
         }
 
         .projects-intro a {
             font-weight: 600;
+        }
+
+        .projects-framing {
+            font-size: 0.9rem;
+            color: var(--dark-light);
+            font-style: italic;
+            margin-bottom: 24px;
+            padding: 12px 16px;
+            background: var(--secondary-light);
+            border-radius: var(--radius);
+            border-left: 4px solid var(--secondary);
         }
 
         .project {
@@ -546,7 +570,7 @@
             <!-- Professional Summary -->
             <section class="section summary">
                 <h2 class="section-title">Professional Summary</h2>
-                <p>IT Professional with hands-on production experience in Microsoft 365 administration and cloud infrastructure. Currently managing Exchange Online, SharePoint, Entra ID, and email security (SPF/DKIM/DMARC) for a live business environment, with additional expertise in Active Directory, PowerShell automation, and ServiceNow ITSM. Ready to bring production-tested skills to a growing IT team.</p>
+                <p>IT Professional with hands-on production experience supporting live Microsoft 365 and cloud infrastructure environments. Proven in Exchange Online, Entra ID, ServiceNow ITSM, and PowerShell automation, with strong foundations in Active Directory and enterprise operations.</p>
             </section>
 
             <!-- Technical Skills -->
@@ -554,7 +578,7 @@
                 <h2 class="section-title">Technical Skills</h2>
                 <div class="skills-grid">
                     <span class="skill-category">Cloud & Identity</span>
-                    <span class="skill-items">Microsoft 365 Admin, Microsoft Entra ID (MFA, SSO, Security Defaults)</span>
+                    <span class="skill-items">Microsoft 365 Admin, Microsoft Entra ID (Azure AD), MFA, SSO, Security Defaults</span>
                     
                     <span class="skill-category">Email & Security</span>
                     <span class="skill-items">Exchange Online, SPF, DKIM, DMARC Configuration, Email Troubleshooting</span>
@@ -600,8 +624,8 @@
                     </div>
                     <p class="job-description">Providing remote IT infrastructure and systems administration for a property services company specialising in Airbnb and holiday let cleaning in Hull, UK.</p>
                     <ul>
+                        <li class="highlight"><strong>Achieved 100% email authentication compliance (29/29 MXToolbox checks)</strong> by implementing SPF, DKIM, and DMARC</li>
                         <li>Deployed Microsoft 365 Business tenant with custom domain, configuring Exchange Online for professional business communications</li>
-                        <li>Implemented email security protocols (SPF, DKIM, DMARC), achieving 100% authentication compliance across 29/29 MXToolbox verification tests</li>
                         <li>Configured Microsoft Entra ID with Security Defaults, enforcing MFA across all user accounts to meet security best practices</li>
                         <li>Created break-glass emergency admin account following enterprise disaster recovery procedures</li>
                         <li>Built SharePoint Online document management system with 5 structured libraries supporting operational workflows</li>
@@ -649,6 +673,8 @@
             <section class="section projects">
                 <h2 class="section-title">Technical Projects</h2>
                 <p class="projects-intro">View full code, scripts, build documentation, and screenshots at: <a href="https://github.com/jesseee9/IT-Infrastructure-Portfolio" target="_blank">github.com/jesseee9/IT-Infrastructure-Portfolio</a></p>
+                
+                <p class="projects-framing">All projects were designed to mirror real-world enterprise IT environments and operational workflows.</p>
                 
                 <!-- Project 1 -->
                 <div class="project">
@@ -741,8 +767,8 @@
                             </svg>
                         </div>
                         <div class="cert-info">
-                            <h4>Google IT Support Professional Certificate</h4>
-                            <p>Google / Coursera</p>
+                            <h4>NCFE Level 2 Diploma in Data Protection & Data Security</h4>
+                            <p>NCFE</p>
                         </div>
                     </li>
                     <li class="cert-item">
@@ -753,8 +779,8 @@
                             </svg>
                         </div>
                         <div class="cert-info">
-                            <h4>NCFE Level 2 Diploma in Data Protection & Data Security</h4>
-                            <p>NCFE</p>
+                            <h4>Google IT Support Professional Certificate</h4>
+                            <p>Google / Coursera</p>
                         </div>
                     </li>
                 </ul>
