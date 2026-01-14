@@ -22,7 +22,6 @@
             --grey-light: #f1f5f9;
             --white: #ffffff;
             --shadow: 0 1px 3px rgba(0,0,0,0.1), 0 1px 2px rgba(0,0,0,0.06);
-            --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -2px rgba(0,0,0,0.1);
             --shadow-lg: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -4px rgba(0,0,0,0.1);
             --radius: 8px;
             --radius-lg: 12px;
@@ -32,10 +31,6 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-        }
-
-        html {
-            scroll-behavior: smooth;
         }
 
         body {
@@ -49,7 +44,6 @@
         a {
             color: var(--primary);
             text-decoration: none;
-            transition: color 0.2s;
         }
 
         a:hover {
@@ -62,7 +56,6 @@
             padding: 40px 20px;
         }
 
-        /* Header */
         .header {
             background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
             color: var(--white);
@@ -74,7 +67,6 @@
             font-size: 2.5rem;
             font-weight: 800;
             margin-bottom: 16px;
-            letter-spacing: -0.02em;
         }
 
         .header-contact {
@@ -83,18 +75,13 @@
             flex-wrap: wrap;
             gap: 16px 32px;
             font-size: 0.95rem;
-            opacity: 0.95;
         }
 
-        .header-contact a {
+        .header-contact a, .header-contact span {
             color: var(--white);
             display: flex;
             align-items: center;
             gap: 6px;
-        }
-
-        .header-contact a:hover {
-            opacity: 0.8;
         }
 
         .header-contact svg {
@@ -102,14 +89,12 @@
             height: 18px;
         }
 
-        /* Resume Content */
         .resume {
             background: var(--white);
             border-radius: var(--radius-lg);
             box-shadow: var(--shadow-lg);
             margin-top: -30px;
             position: relative;
-            z-index: 10;
         }
 
         .section {
@@ -140,17 +125,15 @@
             background: var(--grey-light);
         }
 
-        /* Summary */
         .summary p {
             font-size: 1.05rem;
             color: var(--dark-light);
             line-height: 1.8;
         }
 
-        /* Skills */
         .skills-grid {
             display: grid;
-            grid-template-columns: 160px 1fr;
+            grid-template-columns: 150px 1fr;
             gap: 12px 24px;
         }
 
@@ -165,9 +148,8 @@
             font-size: 0.9rem;
         }
 
-        /* Experience */
         .job {
-            margin-bottom: 32px;
+            margin-bottom: 28px;
         }
 
         .job:last-child {
@@ -184,9 +166,14 @@
         }
 
         .job-title {
-            font-size: 1.15rem;
+            font-size: 1.1rem;
             font-weight: 700;
             color: var(--dark);
+        }
+
+        .job-type {
+            font-weight: 400;
+            color: var(--grey);
         }
 
         .job-company {
@@ -202,24 +189,23 @@
 
         .job-description {
             color: var(--grey);
-            margin-bottom: 16px;
+            margin-bottom: 12px;
             font-size: 0.95rem;
         }
 
-        .job ul {
+        .job ul, .project ul {
             list-style: none;
-            margin-bottom: 16px;
         }
 
-        .job li {
+        .job li, .project li {
             position: relative;
-            padding-left: 20px;
+            padding-left: 18px;
             margin-bottom: 8px;
             color: var(--dark-light);
             font-size: 0.95rem;
         }
 
-        .job li::before {
+        .job li::before, .project li::before {
             content: '';
             position: absolute;
             left: 0;
@@ -230,140 +216,48 @@
             border-radius: 50%;
         }
 
-        .job li.highlight {
-            background: var(--secondary-light);
-            padding: 12px 12px 12px 32px;
-            border-radius: var(--radius);
-            margin-left: -12px;
-            margin-bottom: 12px;
-        }
-
-        .job li.highlight::before {
-            left: 12px;
-            top: 18px;
-        }
-
-        .job-tech {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-            margin-bottom: 12px;
-        }
-
-        .tech-tag {
-            background: var(--primary-light);
-            color: var(--primary-dark);
-            padding: 4px 12px;
-            border-radius: 50px;
-            font-size: 0.8rem;
-            font-weight: 500;
-        }
-
-        .job-portfolio {
-            font-size: 0.9rem;
-        }
-
-        .job-portfolio a {
-            font-weight: 500;
-        }
-
         .divider {
             height: 1px;
             background: var(--grey-light);
             margin: 24px 0;
         }
 
-        /* Projects */
-        .projects-intro {
+        .project-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--dark);
+            margin-bottom: 8px;
+        }
+
+        .project-subtitle {
+            color: var(--grey);
             margin-bottom: 16px;
             font-size: 0.95rem;
+        }
+
+        .project-section {
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: var(--primary);
+            margin-top: 16px;
+            margin-bottom: 10px;
+        }
+
+        .projects-intro {
             color: var(--grey);
+            margin-bottom: 20px;
+            font-size: 0.95rem;
         }
 
         .projects-intro a {
             font-weight: 600;
         }
 
-        .projects-framing {
-            font-size: 0.9rem;
-            color: var(--dark-light);
-            font-style: italic;
-            margin-bottom: 24px;
-            padding: 12px 16px;
-            background: var(--secondary-light);
-            border-radius: var(--radius);
-            border-left: 4px solid var(--secondary);
-        }
-
-        .project {
-            background: var(--grey-light);
-            border-radius: var(--radius);
-            padding: 24px;
-            margin-bottom: 20px;
-        }
-
-        .project:last-child {
-            margin-bottom: 0;
-        }
-
-        .project-title {
-            font-size: 1.1rem;
-            font-weight: 700;
-            color: var(--dark);
-            margin-bottom: 6px;
-        }
-
-        .project-subtitle {
-            font-size: 0.9rem;
-            color: var(--grey);
-            margin-bottom: 16px;
-        }
-
-        .project ul {
-            list-style: none;
-            margin-bottom: 16px;
-        }
-
-        .project li {
-            position: relative;
-            padding-left: 20px;
-            margin-bottom: 8px;
-            color: var(--dark-light);
-            font-size: 0.9rem;
-        }
-
-        .project li::before {
-            content: '';
-            position: absolute;
-            left: 0;
-            top: 8px;
-            width: 6px;
-            height: 6px;
-            background: var(--secondary);
-            border-radius: 50%;
-        }
-
-        .project-tech {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 6px;
-        }
-
-        .project-tech .tech-tag {
-            font-size: 0.75rem;
-            padding: 3px 10px;
-        }
-
-        /* Certifications */
-        .cert-list {
-            list-style: none;
-        }
-
         .cert-item {
             display: flex;
             align-items: flex-start;
             gap: 12px;
-            padding: 12px 0;
+            padding: 14px 0;
             border-bottom: 1px solid var(--grey-light);
         }
 
@@ -405,33 +299,8 @@
             font-weight: 500;
         }
 
-        .cert-pursuing {
-            margin-top: 20px;
-            padding: 16px;
-            background: var(--secondary-light);
-            border-radius: var(--radius);
-        }
-
-        .cert-pursuing h4 {
-            font-size: 0.9rem;
-            font-weight: 600;
-            color: var(--secondary);
-            margin-bottom: 8px;
-        }
-
-        .cert-pursuing ul {
-            list-style: none;
-        }
-
-        .cert-pursuing li {
-            font-size: 0.9rem;
-            color: var(--dark-light);
-            padding: 4px 0;
-        }
-
-        /* Education */
         .education-item {
-            margin-bottom: 16px;
+            margin-bottom: 14px;
         }
 
         .education-item:last-child {
@@ -442,7 +311,7 @@
             font-size: 0.95rem;
             font-weight: 600;
             color: var(--dark);
-            margin-bottom: 4px;
+            margin-bottom: 2px;
         }
 
         .education-item p {
@@ -450,7 +319,6 @@
             color: var(--grey);
         }
 
-        /* Footer */
         .footer {
             text-align: center;
             padding: 32px 20px;
@@ -467,7 +335,6 @@
             color: var(--primary);
         }
 
-        /* Responsive */
         @media (max-width: 768px) {
             .header h1 {
                 font-size: 2rem;
@@ -484,11 +351,7 @@
 
             .skills-grid {
                 grid-template-columns: 1fr;
-                gap: 16px;
-            }
-
-            .skill-category {
-                margin-bottom: -8px;
+                gap: 14px;
             }
 
             .job-header {
@@ -496,14 +359,9 @@
             }
         }
 
-        /* Print Styles */
         @media print {
             body {
                 background: white;
-            }
-
-            .container {
-                padding: 0;
             }
 
             .resume {
@@ -515,16 +373,11 @@
                 background: var(--dark);
                 padding: 30px 20px;
             }
-
-            .section {
-                padding: 20px 30px;
-            }
         }
     </style>
 </head>
 <body>
 
-    <!-- Header -->
     <header class="header">
         <h1>Jesse Adejoh</h1>
         <div class="header-contact">
@@ -563,17 +416,14 @@
         </div>
     </header>
 
-    <!-- Resume Content -->
     <div class="container">
         <div class="resume">
 
-            <!-- Professional Summary -->
             <section class="section summary">
                 <h2 class="section-title">Professional Summary</h2>
-                <p>IT Professional with hands-on production experience supporting live Microsoft 365 and cloud infrastructure environments. Proven in Exchange Online, Entra ID, ServiceNow ITSM, and PowerShell automation, with strong foundations in Active Directory and enterprise operations.</p>
+                <p>IT Professional with hands-on production experience supporting live Microsoft 365 and cloud infrastructure environments. Experienced with Exchange Online, Entra ID, ServiceNow ITSM, and PowerShell automation, with strong foundations in Active Directory and enterprise operations.</p>
             </section>
 
-            <!-- Technical Skills -->
             <section class="section skills">
                 <h2 class="section-title">Technical Skills</h2>
                 <div class="skills-grid">
@@ -589,9 +439,6 @@
                     <span class="skill-category">Collaboration</span>
                     <span class="skill-items">SharePoint Online, Document Libraries, Microsoft Teams</span>
                     
-                    <span class="skill-category">Web & Hosting</span>
-                    <span class="skill-items">GitHub Pages, Custom Domain Configuration, HTTPS, DNS Management</span>
-                    
                     <span class="skill-category">Automation</span>
                     <span class="skill-items">PowerShell Scripting, Flow Designer, CSV-based Bulk Operations</span>
                     
@@ -601,222 +448,143 @@
                     <span class="skill-category">Virtualization</span>
                     <span class="skill-items">VMware Workstation, Snapshots, Virtual Networking (vSwitch)</span>
                     
-                    <span class="skill-category">Operating Systems</span>
-                    <span class="skill-items">Windows Server, Windows 10/11, Linux (CLI Basics)</span>
-                    
-                    <span class="skill-category">Core Competencies</span>
-                    <span class="skill-items">Remote Technical Support, Troubleshooting, Documentation, IT Service Management</span>
+                    <span class="skill-category">Web & Hosting</span>
+                    <span class="skill-items">GitHub Pages, Custom Domain Configuration, HTTPS, DNS Management</span>
                 </div>
             </section>
 
-            <!-- Professional Experience -->
             <section class="section experience">
                 <h2 class="section-title">Professional Experience</h2>
                 
-                <!-- Job 1 -->
                 <div class="job">
                     <div class="job-header">
                         <div>
-                            <h3 class="job-title">IT Administrator <span style="font-weight: 400; color: var(--grey);">(Contract)</span></h3>
+                            <h3 class="job-title">IT Administrator <span class="job-type">(Contract)</span></h3>
                             <p class="job-company">Guest Turnover Solutions</p>
                         </div>
-                        <span class="job-date">Dec 2025 - Present</span>
+                        <span class="job-date">Nov 2025 - Present</span>
                     </div>
-                    <p class="job-description">Providing remote IT infrastructure and systems administration for a property services company specialising in Airbnb and holiday let cleaning in Hull, UK.</p>
+                    <p class="job-description">Providing remote IT administration and infrastructure support for a property services company.</p>
                     <ul>
-                        <li class="highlight"><strong>Achieved 100% email authentication compliance (29/29 MXToolbox checks)</strong> by implementing SPF, DKIM, and DMARC</li>
-                        <li>Deployed Microsoft 365 Business tenant with custom domain, configuring Exchange Online for professional business communications</li>
-                        <li>Configured Microsoft Entra ID with Security Defaults, enforcing MFA across all user accounts to meet security best practices</li>
-                        <li>Created break-glass emergency admin account following enterprise disaster recovery procedures</li>
-                        <li>Built SharePoint Online document management system with 5 structured libraries supporting operational workflows</li>
-                        <li>Deployed responsive business website using GitHub Pages with custom domain, HTTPS, and mobile optimisation</li>
-                        <li>Managed 12+ DNS records across multiple providers (Namecheap to Microsoft 365, GitHub Pages)</li>
-                        <li>Configured email aliases and automated forwarding rules, reducing response time for client enquiries</li>
-                        <li>Documented all configurations and troubleshooting steps in GitHub repository for knowledge management</li>
+                        <li>Manage Microsoft 365 tenant including Exchange Online, SharePoint, and Entra ID user administration</li>
+                        <li>Monitor sign-in logs and security alerts weekly, maintaining Secure Score via Security Defaults and MFA enforcement</li>
+                        <li>Achieved 100% email authentication compliance by configuring SPF, DKIM, and DMARC (29/29 MXToolbox checks)</li>
+                        <li>Administer break-glass emergency access accounts and maintain disaster recovery documentation</li>
+                        <li>Maintain company website hosted on GitHub Pages, ensuring uptime and SSL certificate validity</li>
+                        <li>Provide technical troubleshooting and support for email, document storage, and DNS-related issues</li>
                     </ul>
-                    <div class="job-tech">
-                        <span class="tech-tag">Microsoft 365</span>
-                        <span class="tech-tag">Exchange Online</span>
-                        <span class="tech-tag">SharePoint Online</span>
-                        <span class="tech-tag">Microsoft Entra ID</span>
-                        <span class="tech-tag">GitHub Pages</span>
-                        <span class="tech-tag">DNS</span>
-                        <span class="tech-tag">SPF</span>
-                        <span class="tech-tag">DKIM</span>
-                        <span class="tech-tag">DMARC</span>
-                    </div>
-                    <p class="job-portfolio">Portfolio: <a href="https://github.com/jesseee9/m365-business-infrastructure" target="_blank">github.com/jesseee9/m365-small-business-infrastructure</a></p>
                 </div>
 
                 <div class="divider"></div>
 
-                <!-- Job 2 -->
                 <div class="job">
                     <div class="job-header">
                         <div>
-                            <h3 class="job-title">Logistics Operative <span style="font-weight: 400; color: var(--grey);">(Contractor)</span></h3>
+                            <h3 class="job-title">Logistics Operative <span class="job-type">(Contractor)</span></h3>
                             <p class="job-company">KFM & Various Agencies</p>
                         </div>
-                        <span class="job-date">Nov 2022 - Nov 2025</span>
-                        
+                        <span class="job-date">Oct 2022 - Oct 2025</span>
                     </div>
-                    <p class="job-description">Fulfilled contract assignments for major retailers including ASDA and NEXT while undertaking intensive self-directed IT training.</p>
+                    <p class="job-description">Contract assignments for major retailers including ASDA and NEXT.</p>
                     <ul>
-                        <li><strong>Technical Adaptability:</strong> Rapidly adapted to various proprietary Warehouse Management Systems (WMS) and handheld data terminals across different organisations</li>
-                        <li><strong>Data Accuracy:</strong> Analysed scan data to classify stock and flag tracking errors, ensuring inventory database integrity was maintained</li>
-                        <li><strong>Reliability:</strong> Maintained a 100% attendance record and consistently met strict Service Level Agreements (SLAs) regarding throughput and accuracy</li>
-                        <li><strong>Process Improvement:</strong> Identified recurring workflow bottlenecks and communicated logic-based solutions to shift supervisors</li>
+                        <li>Rapidly adapted to various proprietary Warehouse Management Systems (WMS) and handheld data terminals</li>
+                        <li>Analysed scan data to classify stock and flag tracking errors, ensuring database accuracy</li>
+                        <li>Maintained 100% attendance record and consistently met strict Service Level Agreements (SLAs)</li>
                     </ul>
                 </div>
             </section>
-
-            <!-- Technical Projects -->
-            <section class="section projects">
+                        <section class="section projects">
                 <h2 class="section-title">Technical Projects</h2>
-                <p class="projects-intro">View full code, scripts, build documentation, and screenshots at: <a href="https://github.com/jesseee9/IT-Infrastructure-Portfolio" target="_blank">github.com/jesseee9/IT-Infrastructure-Portfolio</a></p>
+                <p class="projects-intro">Full documentation and scripts at: <a href="https://github.com/jesseee9/IT-Infrastructure-Portfolio" target="_blank">github.com/jesseee9/IT-Infrastructure-Portfolio</a></p>
                 
-                <p class="projects-framing">All projects were designed to mirror real-world enterprise IT environments and operational workflows.</p>
-                
-                <!-- Project 1 -->
                 <div class="project">
-                    <h3 class="project-title">Project 1: On-Premises Infrastructure Build</h3>
-                    <p class="project-subtitle">Built a corporate Windows domain environment from scratch to simulate a live office network.</p>
+                    <h3 class="project-title">Enterprise Infrastructure Lab</h3>
+                    <p class="project-subtitle">Built a complete enterprise environment from the ground up, covering core infrastructure, identity automation, and IT service management.</p>
+                    
+                    <p class="project-section">Core Infrastructure</p>
                     <ul>
-                        <li>Deployed Windows Server 2022 as a Domain Controller using VMware Workstation</li>
+                        <li>Deployed Windows Server 2022 as Domain Controller using VMware Workstation</li>
                         <li>Configured Active Directory Domain Services (AD DS), DNS, and DHCP scopes</li>
-                        <li>Implemented an isolated virtual LAN and joined Windows 11 client workstations to the domain</li>
+                        <li>Implemented isolated virtual LAN and joined Windows 11 clients to the domain</li>
                     </ul>
-                    <div class="project-tech">
-                        <span class="tech-tag">Windows Server 2022</span>
-                        <span class="tech-tag">VMware</span>
-                        <span class="tech-tag">DNS</span>
-                        <span class="tech-tag">DHCP</span>
-                        <span class="tech-tag">TCP/IP Networking</span>
-                    </div>
-                </div>
 
-                <!-- Project 2 -->
-                <div class="project">
-                    <h3 class="project-title">Project 2: Identity & Automation</h3>
-                    <p class="project-subtitle">Automated user provisioning to eliminate manual entry and sync on-prem identities to the cloud.</p>
+                    <p class="project-section">Identity & Automation</p>
                     <ul>
-                        <li>Designed a departmental OU structure mirroring real-world corporate hierarchy</li>
-                        <li>Wrote a PowerShell script to bulk-create 50+ AD users from CSV files, reducing creation time by 90%</li>
-                        <li>Provisioned hybrid identities by syncing local AD users to Azure Entra ID (Cloud)</li>
+                        <li>Designed departmental OU structure mirroring real-world corporate hierarchy</li>
+                        <li>Wrote PowerShell script to bulk-create 50+ AD users from CSV, reducing creation time by 90%</li>
+                        <li>Provisioned hybrid identities by syncing local AD users to Azure Entra ID</li>
                     </ul>
-                    <div class="project-tech">
-                        <span class="tech-tag">PowerShell Scripting</span>
-                        <span class="tech-tag">Azure Entra ID</span>
-                        <span class="tech-tag">CSV Parsing</span>
-                        <span class="tech-tag">Bulk Administration</span>
-                    </div>
-                </div>
 
-                <!-- Project 3 -->
-                <div class="project">
-                    <h3 class="project-title">Project 3: ServiceNow Operations (ITSM)</h3>
-                    <p class="project-subtitle">Bridged a cloud ITSM platform with on-premises infrastructure for automated incident handling.</p>
+                    <p class="project-section">ITSM Integration</p>
                     <ul>
-                        <li>Configured a dual-NIC setup to allow secure communication between the isolated lab and the internet</li>
-                        <li>Installed and validated a ServiceNow MID Server to command the Windows Server remotely</li>
-                        <li>Built Flow Designer automation to trigger remediation scripts automatically when specific incidents occurred</li>
+                        <li>Installed and validated ServiceNow MID Server to command Windows Server remotely</li>
+                        <li>Built Flow Designer automation to trigger remediation scripts on incident creation</li>
+                        <li>Configured network bridging for secure communication between isolated lab and internet</li>
                     </ul>
-                    <div class="project-tech">
-                        <span class="tech-tag">ServiceNow</span>
-                        <span class="tech-tag">MID Server</span>
-                        <span class="tech-tag">Flow Designer</span>
-                        <span class="tech-tag">Firewall Configuration</span>
-                    </div>
                 </div>
             </section>
 
-            <!-- Certifications -->
             <section class="section certifications">
-                <h2 class="section-title">Certifications & Credentials</h2>
-                <ul class="cert-list">
-                    <li class="cert-item">
-                        <div class="cert-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <circle cx="12" cy="8" r="7"></circle>
-                                <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
-                            </svg>
-                        </div>
-                        <div class="cert-info">
-                            <h4>Identities and Access Using Microsoft Entra</h4>
-                            <p>Microsoft Applied Skills</p>
-                            <a href="https://learn.microsoft.com/api/credentials/share/en-us/JesseAdejoh-2833/BD3617BADE595F2E" target="_blank">Verify Credential →</a>
-                        </div>
-                    </li>
-                    <li class="cert-item">
-                        <div class="cert-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <circle cx="12" cy="8" r="7"></circle>
-                                <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
-                            </svg>
-                        </div>
-                        <div class="cert-info">
-                            <h4>Generate Reports with AI Research Agents</h4>
-                            <p>Microsoft Applied Skills</p>
-                            <a href="https://learn.microsoft.com/api/credentials/share/en-us/JesseAdejoh-2833/117BA2E2E895B0FD" target="_blank">Verify Credential →</a>
-                        </div>
-                    </li>
-                    <li class="cert-item">
-                        <div class="cert-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <circle cx="12" cy="8" r="7"></circle>
-                                <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
-                            </svg>
-                        </div>
-                        <div class="cert-info">
-                            <h4>NCFE Level 2 Diploma in Data Protection & Data Security</h4>
-                            <p>NCFE</p>
-                        </div>
-                    </li>
-                    <li class="cert-item">
-                        <div class="cert-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <circle cx="12" cy="8" r="7"></circle>
-                                <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
-                            </svg>
-                        </div>
-                        <div class="cert-info">
-                            <h4>Google IT Support Professional Certificate</h4>
-                            <p>Google / Coursera</p>
-                        </div>
-                    </li>
-                </ul>
-                <div class="cert-pursuing">
-                    <h4>Currently Pursuing</h4>
-                    <ul>
-                        <li>SC-900: Microsoft Security, Compliance, and Identity Fundamentals</li>
-                    </ul>
+                <h2 class="section-title">Certifications</h2>
+                <div class="cert-item">
+                    <div class="cert-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="8" r="7"></circle>
+                            <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
+                        </svg>
+                    </div>
+                    <div class="cert-info">
+                        <h4>Identities and Access Using Microsoft Entra</h4>
+                        <p>Microsoft Applied Skills</p>
+                        <a href="https://learn.microsoft.com/api/credentials/share/en-us/JesseAdejoh-2833/BD3617BADE595F2E" target="_blank">Verify Credential →</a>
+                    </div>
+                </div>
+                <div class="cert-item">
+                    <div class="cert-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="8" r="7"></circle>
+                            <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
+                        </svg>
+                    </div>
+                    <div class="cert-info">
+                        <h4>Generate Reports with AI Research Agents</h4>
+                        <p>Microsoft Applied Skills</p>
+                        <a href="https://learn.microsoft.com/api/credentials/share/en-us/JesseAdejoh-2833/117BA2E2E895B0FD" target="_blank">Verify Credential →</a>
+                    </div>
+                </div>
+                <div class="cert-item">
+                    <div class="cert-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="8" r="7"></circle>
+                            <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
+                        </svg>
+                    </div>
+                    <div class="cert-info">
+                        <h4>Google IT Support Professional Certificate</h4>
+                        <p>Google / Coursera</p>
+                    </div>
                 </div>
             </section>
 
-            <!-- Education -->
             <section class="section education">
-                <h2 class="section-title">Education & Training</h2>
+                <h2 class="section-title">Education</h2>
+                <div class="education-item">
+                    <h4>GCSE English Language - Grade 4</h4>
+                    <p>Spoken Language: Distinction</p>
+                </div>
+                <div class="education-item">
+                    <h4>NCFE Level 2 Diploma in Data Protection & Data Security</h4>
+                    <p>GDPR compliance, data handling, and information security principles</p>
+                </div>
                 <div class="education-item">
                     <h4>NCFE Level 2 Diploma in Entry to the Uniformed Services</h4>
-                </div>
-                <div class="education-item">
-                    <h4>St. Theresa Secondary School</h4>
-                    <p>English (Excellent), Spoken Language (Distinction)</p>
-                </div>
-                <div class="education-item">
-                    <h4>Continuous Learning</h4>
-                    <p>Microsoft Learn | ServiceNow University</p>
-                </div>
-                <div class="education-item">
-                    <h4>Additional Training</h4>
-                    <p>Skills for Life Military Camp (Leadership & Discipline), Cat Zero Training (Health & Safety)</p>
+                    <p>Leadership, discipline, and operational planning</p>
                 </div>
             </section>
 
         </div>
     </div>
 
-    <!-- Footer -->
     <footer class="footer">
         <p>
             <a href="https://github.com/jesseee9" target="_blank">GitHub</a>
