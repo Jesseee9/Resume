@@ -3,30 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Jesse Adejoh - IT Professional | Microsoft 365 Administrator | Cloud Infrastructure">
-    <meta name="keywords" content="IT Administrator, Microsoft 365, Azure, Active Directory, PowerShell, ServiceNow, Entra ID">
+    <meta name="description" content="Jesse Adejoh - IT Professional | Microsoft 365, Entra ID, PowerShell, Active Directory">
+    <meta property="og:title" content="Jesse Adejoh | IT Professional">
+    <meta property="og:description" content="IT Professional with hands-on experience in Microsoft 365, Entra ID, and enterprise infrastructure.">
+    <meta property="og:type" content="website">
     <title>Jesse Adejoh | IT Professional</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
     <style>
-        :root {
-            --primary: #2563eb;
-            --primary-dark: #1d4ed8;
-            --primary-light: #dbeafe;
-            --secondary: #0d9488;
-            --secondary-light: #ccfbf1;
-            --dark: #0f172a;
-            --dark-light: #334155;
-            --grey: #64748b;
-            --grey-light: #f1f5f9;
-            --white: #ffffff;
-            --shadow: 0 1px 3px rgba(0,0,0,0.1), 0 1px 2px rgba(0,0,0,0.06);
-            --shadow-lg: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -4px rgba(0,0,0,0.1);
-            --radius: 8px;
-            --radius-lg: 12px;
-        }
-
         * {
             margin: 0;
             padding: 0;
@@ -34,565 +17,249 @@
         }
 
         body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-            font-size: 16px;
+            font-family: 'Segoe UI', Calibri, Arial, sans-serif;
             line-height: 1.6;
-            color: var(--dark);
-            background: var(--grey-light);
-        }
-
-        a {
-            color: var(--primary);
-            text-decoration: none;
-        }
-
-        a:hover {
-            color: var(--primary-dark);
+            color: #333;
+            background-color: #f5f5f5;
+            padding: 20px;
         }
 
         .container {
-            max-width: 900px;
+            max-width: 800px;
             margin: 0 auto;
-            padding: 40px 20px;
+            background-color: #fff;
+            padding: 40px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
         }
 
-        .header {
-            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
-            color: var(--white);
-            padding: 60px 20px;
+        header {
             text-align: center;
+            margin-bottom: 30px;
+            border-bottom: 2px solid #0078D4;
+            padding-bottom: 20px;
         }
 
-        .header h1 {
-            font-size: 2.5rem;
-            font-weight: 800;
-            margin-bottom: 16px;
+        h1 {
+            font-size: 2rem;
+            color: #0078D4;
+            margin-bottom: 10px;
         }
 
-        .header-contact {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 16px 32px;
+        .contact-info {
             font-size: 0.95rem;
+            color: #555;
         }
 
-        .header-contact a, .header-contact span {
-            color: var(--white);
-            display: flex;
-            align-items: center;
-            gap: 6px;
+        .contact-info a {
+            color: #0078D4;
+            text-decoration: none;
         }
 
-        .header-contact svg {
-            width: 18px;
-            height: 18px;
+        .contact-info a:hover {
+            text-decoration: underline;
         }
 
-        .resume {
-            background: var(--white);
-            border-radius: var(--radius-lg);
-            box-shadow: var(--shadow-lg);
-            margin-top: -30px;
-            position: relative;
-        }
-
-        .section {
-            padding: 32px 40px;
-            border-bottom: 1px solid var(--grey-light);
-        }
-
-        .section:last-child {
-            border-bottom: none;
-        }
-
-        .section-title {
-            font-size: 0.85rem;
-            font-weight: 700;
-            color: var(--primary);
+        h2 {
+            font-size: 1.2rem;
+            color: #0078D4;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 5px;
+            margin-top: 25px;
+            margin-bottom: 15px;
             text-transform: uppercase;
-            letter-spacing: 0.1em;
-            margin-bottom: 20px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
         }
 
-        .section-title::after {
-            content: '';
-            flex: 1;
-            height: 2px;
-            background: var(--grey-light);
-        }
-
-        .summary p {
-            font-size: 1.05rem;
-            color: var(--dark-light);
-            line-height: 1.8;
+        .summary {
+            font-size: 0.95rem;
+            color: #444;
         }
 
         .skills-grid {
             display: grid;
-            grid-template-columns: 150px 1fr;
-            gap: 12px 24px;
+            grid-template-columns: 1fr;
+            gap: 8px;
         }
 
-        .skill-category {
-            font-weight: 600;
-            color: var(--dark);
+        .skill-row {
             font-size: 0.9rem;
         }
 
-        .skill-items {
-            color: var(--grey);
-            font-size: 0.9rem;
+        .skill-row strong {
+            color: #0078D4;
         }
 
         .job {
-            margin-bottom: 28px;
-        }
-
-        .job:last-child {
-            margin-bottom: 0;
+            margin-bottom: 20px;
         }
 
         .job-header {
             display: flex;
             justify-content: space-between;
-            align-items: flex-start;
             flex-wrap: wrap;
-            gap: 8px;
-            margin-bottom: 8px;
+            margin-bottom: 5px;
         }
 
         .job-title {
-            font-size: 1.1rem;
-            font-weight: 700;
-            color: var(--dark);
-        }
-
-        .job-type {
-            font-weight: 400;
-            color: var(--grey);
+            font-weight: bold;
+            font-size: 1rem;
         }
 
         .job-company {
-            color: var(--primary);
-            font-weight: 600;
+            color: #555;
+            font-size: 0.95rem;
         }
 
         .job-date {
+            color: #777;
             font-size: 0.9rem;
-            color: var(--grey);
-            font-weight: 500;
         }
 
-        .job-description {
-            color: var(--grey);
-            margin-bottom: 12px;
-            font-size: 0.95rem;
+        ul {
+            margin-left: 20px;
+            margin-top: 10px;
         }
 
-        .job ul, .project ul {
+        li {
+            margin-bottom: 5px;
+            font-size: 0.9rem;
+        }
+
+        .project-link {
+            font-size: 0.9rem;
+            margin-bottom: 15px;
+        }
+
+        .project-link a {
+            color: #0078D4;
+        }
+
+        .cert-list, .edu-list {
             list-style: none;
+            margin-left: 0;
         }
 
-        .job li, .project li {
-            position: relative;
-            padding-left: 18px;
+        .cert-list li, .edu-list li {
             margin-bottom: 8px;
-            color: var(--dark-light);
-            font-size: 0.95rem;
-        }
-
-        .job li::before, .project li::before {
-            content: '';
-            position: absolute;
-            left: 0;
-            top: 10px;
-            width: 6px;
-            height: 6px;
-            background: var(--secondary);
-            border-radius: 50%;
-        }
-
-        .divider {
-            height: 1px;
-            background: var(--grey-light);
-            margin: 24px 0;
-        }
-
-        .project-title {
-            font-size: 1.1rem;
-            font-weight: 700;
-            color: var(--dark);
-            margin-bottom: 8px;
-        }
-
-        .project-subtitle {
-            color: var(--grey);
-            margin-bottom: 16px;
-            font-size: 0.95rem;
-        }
-
-        .project-section {
-            font-size: 0.95rem;
-            font-weight: 600;
-            color: var(--primary);
-            margin-top: 16px;
-            margin-bottom: 10px;
-        }
-
-        .projects-intro {
-            color: var(--grey);
-            margin-bottom: 20px;
-            font-size: 0.95rem;
-        }
-
-        .projects-intro a {
-            font-weight: 600;
-        }
-
-        .cert-item {
-            display: flex;
-            align-items: flex-start;
-            gap: 12px;
-            padding: 14px 0;
-            border-bottom: 1px solid var(--grey-light);
-        }
-
-        .cert-item:last-child {
-            border-bottom: none;
-        }
-
-        .cert-icon {
-            width: 40px;
-            height: 40px;
-            background: var(--primary-light);
-            border-radius: var(--radius);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-shrink: 0;
-        }
-
-        .cert-icon svg {
-            width: 20px;
-            height: 20px;
-            color: var(--primary);
-        }
-
-        .cert-info h4 {
-            font-size: 0.95rem;
-            font-weight: 600;
-            color: var(--dark);
-            margin-bottom: 4px;
-        }
-
-        .cert-info p {
-            font-size: 0.85rem;
-            color: var(--grey);
-        }
-
-        .cert-info a {
-            font-size: 0.8rem;
-            font-weight: 500;
-        }
-
-        .education-item {
-            margin-bottom: 14px;
-        }
-
-        .education-item:last-child {
-            margin-bottom: 0;
-        }
-
-        .education-item h4 {
-            font-size: 0.95rem;
-            font-weight: 600;
-            color: var(--dark);
-            margin-bottom: 2px;
-        }
-
-        .education-item p {
-            font-size: 0.85rem;
-            color: var(--grey);
-        }
-
-        .footer {
-            text-align: center;
-            padding: 32px 20px;
-            color: var(--grey);
-            font-size: 0.85rem;
-        }
-
-        .footer a {
-            color: var(--grey);
-            margin: 0 12px;
-        }
-
-        .footer a:hover {
-            color: var(--primary);
-        }
-
-        @media (max-width: 768px) {
-            .header h1 {
-                font-size: 2rem;
-            }
-
-            .header-contact {
-                flex-direction: column;
-                gap: 12px;
-            }
-
-            .section {
-                padding: 24px 20px;
-            }
-
-            .skills-grid {
-                grid-template-columns: 1fr;
-                gap: 14px;
-            }
-
-            .job-header {
-                flex-direction: column;
-            }
+            font-size: 0.9rem;
         }
 
         @media print {
             body {
-                background: white;
+                background: #fff;
+                padding: 0;
             }
-
-            .resume {
+            .container {
                 box-shadow: none;
-                margin-top: 0;
+                padding: 20px;
             }
+        }
 
-            .header {
-                background: var(--dark);
-                padding: 30px 20px;
+        @media (max-width: 600px) {
+            .container {
+                padding: 20px;
+            }
+            .job-header {
+                flex-direction: column;
             }
         }
     </style>
 </head>
 <body>
-
-    <header class="header">
-        <h1>Jesse Adejoh</h1>
-        <div class="header-contact">
-            <span>
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
-                    <circle cx="12" cy="10" r="3"></circle>
-                </svg>
-                Liverpool, UK
-            </span>
-            <a href="tel:07563990697">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
-                </svg>
-                07563 990697
-            </a>
-            <a href="mailto:jesseadejoh9@gmail.com">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-                    <polyline points="22,6 12,13 2,6"></polyline>
-                </svg>
-                jesseadejoh9@gmail.com
-            </a>
-            <a href="https://github.com/jesseee9" target="_blank">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                </svg>
-                github.com/jesseee9
-            </a>
-            <a href="https://linkedin.com/in/jesseadejoh" target="_blank">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-                </svg>
-                linkedin.com/in/jesseadejoh
-            </a>
-        </div>
-    </header>
-
     <div class="container">
-        <div class="resume">
+        <header>
+            <h1>JESSE ADEJOH</h1>
+            <div class="contact-info">
+                Liverpool, UK<br>
+                07563 990697 | <a href="mailto:jesseadejoh9@gmail.com">jesseadejoh9@gmail.com</a><br>
+                <a href="https://github.com/jesseee9" target="_blank">GitHub: github.com/jesseee9</a> |
+                <a href="https://linkedin.com/in/jesseadejoh" target="_blank">LinkedIn: linkedin.com/in/jesseadejoh</a>
+            </div>
+        </header>
 
-            <section class="section summary">
-                <h2 class="section-title">Professional Summary</h2>
-                <p>IT Professional with hands-on production experience supporting live Microsoft 365 and cloud infrastructure environments. Experienced with Exchange Online, Entra ID, ServiceNow ITSM, and PowerShell automation, with strong foundations in Active Directory and enterprise operations.</p>
-            </section>
+        <section>
+            <h2>Professional Summary</h2>
+            <p class="summary">
+                IT Professional with hands-on production experience supporting live Microsoft 365 and cloud infrastructure environments. Experienced with Exchange Online, Entra ID, ServiceNow ITSM, and PowerShell automation, with strong foundations in Active Directory and enterprise IT operations. Seeking junior IT support roles to apply practical experience and grow.
+            </p>
+        </section>
 
-            <section class="section skills">
-                <h2 class="section-title">Technical Skills</h2>
-                <div class="skills-grid">
-                    <span class="skill-category">Cloud & Identity</span>
-                    <span class="skill-items">Microsoft 365 Admin, Microsoft Entra ID (Azure AD), MFA, SSO, Security Defaults</span>
-                    
-                    <span class="skill-category">Email & Security</span>
-                    <span class="skill-items">Exchange Online, SPF, DKIM, DMARC Configuration, Email Troubleshooting</span>
-                    
-                    <span class="skill-category">Infrastructure</span>
-                    <span class="skill-items">Windows Server 2022, Active Directory, DNS, DHCP, Group Policy</span>
-                    
-                    <span class="skill-category">Collaboration</span>
-                    <span class="skill-items">SharePoint Online, Document Libraries, Microsoft Teams</span>
-                    
-                    <span class="skill-category">Automation</span>
-                    <span class="skill-items">PowerShell Scripting, Flow Designer, CSV-based Bulk Operations</span>
-                    
-                    <span class="skill-category">ITSM</span>
-                    <span class="skill-items">ServiceNow Administration, MID Server, Incident Management, SLA Compliance</span>
-                    
-                    <span class="skill-category">Virtualization</span>
-                    <span class="skill-items">VMware Workstation, Snapshots, Virtual Networking (vSwitch)</span>
-                    
-                    <span class="skill-category">Web & Hosting</span>
-                    <span class="skill-items">GitHub Pages, Custom Domain Configuration, HTTPS, DNS Management</span>
-                </div>
-            </section>
+        <section>
+            <h2>Technical Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-row"><strong>Cloud & Identity:</strong> Microsoft 365 Admin, Entra ID (Azure AD), MFA, SSO, Security Defaults</div>
+                <div class="skill-row"><strong>Email & Security:</strong> Exchange Online, SPF, DKIM, DMARC, Email Troubleshooting</div>
+                <div class="skill-row"><strong>Infrastructure:</strong> Windows Server 2022, Active Directory, DNS, DHCP, Group Policy</div>
+                <div class="skill-row"><strong>Automation & ITSM:</strong> PowerShell Scripting, ServiceNow, MID Server, Flow Designer</div>
+                <div class="skill-row"><strong>Platforms:</strong> VMware Workstation, SharePoint Online, GitHub</div>
+            </div>
+        </section>
+                <section>
+            <h2>Professional Experience</h2>
 
-            <section class="section experience">
-                <h2 class="section-title">Professional Experience</h2>
-                
-                <div class="job">
-                    <div class="job-header">
-                        <div>
-                            <h3 class="job-title">IT Administrator <span class="job-type">(Contract)</span></h3>
-                            <p class="job-company">Guest Turnover Solutions</p>
-                        </div>
-                        <span class="job-date">Nov 2025 - Present</span>
-                    </div>
-                    <p class="job-description">Providing remote IT administration and infrastructure support for a property services company.</p>
-                    <ul>
-                        <li>Manage Microsoft 365 tenant including Exchange Online, SharePoint, and Entra ID user administration</li>
-                        <li>Monitor sign-in logs and security alerts weekly, maintaining Secure Score via Security Defaults and MFA enforcement</li>
-                        <li>Achieved 100% email authentication compliance by configuring SPF, DKIM, and DMARC (29/29 MXToolbox checks)</li>
-                        <li>Administer break-glass emergency access accounts and maintain disaster recovery documentation</li>
-                        <li>Maintain company website hosted on GitHub Pages, ensuring uptime and SSL certificate validity</li>
-                        <li>Provide technical troubleshooting and support for email, document storage, and DNS-related issues</li>
-                    </ul>
+            <div class="job">
+                <div class="job-header">
+                    <span class="job-title">IT Administrator (Contract)</span>
+                    <span class="job-date">Nov 2025 – Present</span>
                 </div>
+                <div class="job-company">Guest Turnover Solutions</div>
+                <ul>
+                    <li>Provide remote IT administration for a live Microsoft 365 tenant (29 active accounts)</li>
+                    <li>Administer Exchange Online, SharePoint Online, and Entra ID users and groups, supporting daily operations</li>
+                    <li>Monitor sign-in logs and security alerts, maintaining Secure Score via MFA and Security Defaults</li>
+                    <li>Implemented SPF, DKIM, and DMARC achieving 100% email authentication compliance</li>
+                    <li>Manage break-glass emergency access accounts and maintain disaster recovery documentation</li>
+                    <li>Troubleshoot email delivery, DNS, and document access issues, minimizing downtime</li>
+                </ul>
+            </div>
 
-                <div class="divider"></div>
+            <div class="job">
+                <div class="job-header">
+                    <span class="job-title">Logistics Operative (Contractor)</span>
+                    <span class="job-date">Nov 2022 – Oct 2025</span>
+                </div>
+                <div class="job-company">KFM & Various Agencies</div>
+                <ul>
+                    <li>Adapted quickly to multiple Warehouse Management Systems (WMS) and handheld terminals</li>
+                    <li>Maintained 100% attendance and consistently met strict SLA requirements</li>
+                    <li>Demonstrated reliability, process adherence, and transferable troubleshooting skills in fast-paced environments</li>
+                </ul>
+            </div>
+        </section>
 
-                <div class="job">
-                    <div class="job-header">
-                        <div>
-                            <h3 class="job-title">Logistics Operative <span class="job-type">(Contractor)</span></h3>
-                            <p class="job-company">KFM & Various Agencies</p>
-                        </div>
-                        <span class="job-date">Oct 2022 - Oct 2025</span>
-                    </div>
-                    <p class="job-description">Contract assignments for major retailers including ASDA and NEXT.</p>
-                    <ul>
-                        <li>Rapidly adapted to various proprietary Warehouse Management Systems (WMS) and handheld data terminals</li>
-                        <li>Analysed scan data to classify stock and flag tracking errors, ensuring database accuracy</li>
-                        <li>Maintained 100% attendance record and consistently met strict Service Level Agreements (SLAs)</li>
-                    </ul>
-                </div>
-            </section>
-                        <section class="section projects">
-                <h2 class="section-title">Technical Projects</h2>
-                <p class="projects-intro">Full documentation and scripts at: <a href="https://github.com/jesseee9/IT-Infrastructure-Portfolio" target="_blank">github.com/jesseee9/IT-Infrastructure-Portfolio</a></p>
-                
-                <div class="project">
-                    <h3 class="project-title">Enterprise Infrastructure Lab</h3>
-                    <p class="project-subtitle">Built a complete enterprise environment from the ground up, covering core infrastructure, identity automation, and IT service management.</p>
-                    
-                    <p class="project-section">Core Infrastructure</p>
-                    <ul>
-                        <li>Deployed Windows Server 2022 as Domain Controller using VMware Workstation</li>
-                        <li>Configured Active Directory Domain Services (AD DS), DNS, and DHCP scopes</li>
-                        <li>Implemented isolated virtual LAN and joined Windows 11 clients to the domain</li>
-                    </ul>
+        <section>
+            <h2>Technical Projects</h2>
+            <p class="project-link">Full documentation and scripts: <a href="https://github.com/jesseee9/IT-Infrastructure-Portfolio" target="_blank">github.com/jesseee9/IT-Infrastructure-Portfolio</a></p>
 
-                    <p class="project-section">Identity & Automation</p>
-                    <ul>
-                        <li>Designed departmental OU structure mirroring real-world corporate hierarchy</li>
-                        <li>Wrote PowerShell script to bulk-create 50+ AD users from CSV, reducing creation time by 90%</li>
-                        <li>Provisioned hybrid identities by syncing local AD users to Azure Entra ID</li>
-                    </ul>
+            <div class="job">
+                <div class="job-title">Enterprise Infrastructure Lab</div>
+                <ul>
+                    <li>Deployed Windows Server 2022 Domain Controller with AD DS, DNS, and DHCP using VMware</li>
+                    <li>Designed departmental OU structure reflecting real corporate environments</li>
+                    <li>Automated bulk user creation (50+ users) using PowerShell and CSV input, reducing setup time by 90%</li>
+                    <li>Installed and validated ServiceNow MID Server for remote command execution</li>
+                    <li>Built Flow Designer automation triggering PowerShell remediation from incidents</li>
+                </ul>
+            </div>
+        </section>
 
-                    <p class="project-section">ITSM Integration</p>
-                    <ul>
-                        <li>Installed and validated ServiceNow MID Server to command Windows Server remotely</li>
-                        <li>Built Flow Designer automation to trigger remediation scripts on incident creation</li>
-                        <li>Configured network bridging for secure communication between isolated lab and internet</li>
-                    </ul>
-                </div>
-            </section>
+        <section>
+            <h2>Certifications</h2>
+            <ul class="cert-list">
+                <li>Microsoft Applied Skills: Identities and Access Using Microsoft Entra</li>
+                <li>Microsoft Applied Skills: Generate Reports with AI Research Agents</li>
+                <li>Google IT Support Professional Certificate</li>
+            </ul>
+        </section>
 
-            <section class="section certifications">
-                <h2 class="section-title">Certifications</h2>
-                <div class="cert-item">
-                    <div class="cert-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <circle cx="12" cy="8" r="7"></circle>
-                            <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
-                        </svg>
-                    </div>
-                    <div class="cert-info">
-                        <h4>Identities and Access Using Microsoft Entra</h4>
-                        <p>Microsoft Applied Skills</p>
-                        <a href="https://learn.microsoft.com/api/credentials/share/en-us/JesseAdejoh-2833/BD3617BADE595F2E" target="_blank">Verify Credential →</a>
-                    </div>
-                </div>
-                <div class="cert-item">
-                    <div class="cert-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <circle cx="12" cy="8" r="7"></circle>
-                            <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
-                        </svg>
-                    </div>
-                    <div class="cert-info">
-                        <h4>Generate Reports with AI Research Agents</h4>
-                        <p>Microsoft Applied Skills</p>
-                        <a href="https://learn.microsoft.com/api/credentials/share/en-us/JesseAdejoh-2833/117BA2E2E895B0FD" target="_blank">Verify Credential →</a>
-                    </div>
-                </div>
-                <div class="cert-item">
-                    <div class="cert-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <circle cx="12" cy="8" r="7"></circle>
-                            <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
-                        </svg>
-                    </div>
-                    <div class="cert-info">
-                        <h4>Google IT Support Professional Certificate</h4>
-                        <p>Google / Coursera</p>
-                    </div>
-                </div>
-            </section>
+        <section>
+            <h2>Education</h2>
+            <ul class="edu-list">
+                <li><strong>GCSE English Language</strong> – Grade 4 (Spoken Language: Distinction)</li>
+                <li><strong>NCFE Level 2 Diploma in Data Protection & Data Security</strong> – GDPR compliance, data handling, information security principles</li>
+                <li><strong>NCFE Level 2 Diploma in Entry to the Uniformed Services</strong> – Leadership, discipline, operational planning</li>
+            </ul>
+        </section>
 
-            <section class="section education">
-                <h2 class="section-title">Education</h2>
-                <div class="education-item">
-                    <h4>GCSE English Language - Grade 4</h4>
-                    <p>Spoken Language: Distinction</p>
-                </div>
-                <div class="education-item">
-                    <h4>NCFE Level 2 Diploma in Data Protection & Data Security</h4>
-                    <p>GDPR compliance, data handling, and information security principles</p>
-                </div>
-                <div class="education-item">
-                    <h4>NCFE Level 2 Diploma in Entry to the Uniformed Services</h4>
-                    <p>Leadership, discipline, and operational planning</p>
-                </div>
-            </section>
-
-        </div>
     </div>
-
-    <footer class="footer">
-        <p>
-            <a href="https://github.com/jesseee9" target="_blank">GitHub</a>
-            <a href="https://linkedin.com/in/jesseadejoh" target="_blank">LinkedIn</a>
-            <a href="mailto:jesseadejoh9@gmail.com">Email</a>
-        </p>
-        <p style="margin-top: 12px;">&copy; 2025 Jesse Adejoh. All rights reserved.</p>
-    </footer>
-
 </body>
 </html>
